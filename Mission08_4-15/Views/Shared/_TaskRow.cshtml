@@ -1,4 +1,4 @@
-﻿<!-- Matthew Andrus IS413 partial page for task item card -->
+<!-- Matthew Andrus IS413 partial page for task item card -->
 
 @model Mission08_4_15.Models.TaskItem
 
@@ -26,7 +26,7 @@
 
         <div class="d-flex gap-2">
             @* Mark Completed *@
-            <form asp-action="MarkCompleted" method="post">
+            <form asp-action="MarkComplete" method="post">
                 @* Use the correct key name below: TaskItemId or Id *@
                 <input type="hidden" name="id" value="@Model.TaskItemId" />
                 <button type="submit" class="btn btn-success btn-sm">Completed</button>
@@ -34,17 +34,16 @@
 
             @* Update *@
             <a class="btn btn-outline-primary btn-sm"
-               asp-action="Edit"
+               asp-action="AddEdit"
                asp-route-id="@Model.TaskItemId">
                 Update
             </a>
 
             @* Delete *@
-            <a class="btn btn-outline-danger btn-sm"
-               asp-action="Delete"
-               asp-route-id="@Model.TaskItemId">
-                Delete
-            </a>
+            <form asp-action="Delete" method="post" class="d-inline">
+                <input type="hidden" name="id" value="@Model.TaskItemId" />
+                <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+            </form>
         </div>
     </div>
 </div>
