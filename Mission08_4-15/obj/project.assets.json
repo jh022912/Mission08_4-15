@@ -436,6 +436,21 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Sqlite/10.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "10.0.2",
+          "Microsoft.Extensions.DependencyModel": "10.0.2",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.11",
+          "SQLitePCLRaw.core": "2.1.11"
+        },
+        "compile": {
+          "lib/net10.0/_._": {}
+        },
+        "runtime": {
+          "lib/net10.0/_._": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore.Sqlite.Core/10.0.2": {
         "type": "package",
         "dependencies": {
@@ -2017,6 +2032,20 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.Sqlite/10.0.2": {
+      "sha512": "xprEItydc2HDhThghBsuq/2t9UoEhJvzKWE2Mx1+hlJdCZBUoZWmbuua9pZy9vTE+aVVssX261cx5F6nUpKzoA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.sqlite/10.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net10.0/_._",
+        "microsoft.entityframeworkcore.sqlite.10.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.Sqlite.Core/10.0.2": {
       "sha512": "IAaYGhV7lKXbG7c5G9mMlc1buAiUXME0RbLPrAFdlmtRuCnUaKbjcupJAQJPz2q2VEjwzm1Mx2WprizFVls0QQ==",
       "type": "package",
@@ -2451,53 +2480,30 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "Microsoft.EntityFrameworkCore >= 10.0.2",
-      "Microsoft.EntityFrameworkCore.Sqlite.Core >= 10.0.2",
+      "Microsoft.EntityFrameworkCore.Sqlite >= 10.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.2",
       "SQLitePCLRaw.bundle_e_sqlite3 >= 3.0.2"
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "/Users/jensroylance/.nuget/packages/": {}
-=======
-    "C:\\Users\\kyoan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> refs/remotes/origin/main
+    "/Users/jacobharrison/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission08_4-15/Mission08_4-15/Mission08_4-15.csproj",
+      "projectUniqueName": "/Users/jacobharrison/RiderProjects/Mission08_4-15/Mission08_4-15/Mission08_4-15.csproj",
       "projectName": "Mission08_4-15",
-      "projectPath": "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission08_4-15/Mission08_4-15/Mission08_4-15.csproj",
-      "packagesPath": "/Users/jensroylance/.nuget/packages/",
-      "outputPath": "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission08_4-15/Mission08_4-15/obj/",
-=======
-      "projectUniqueName": "C:\\Users\\kyoan\\source\\repos\\Mission08_4-15\\Mission08_4-15\\Mission08_4-15.csproj",
-      "projectName": "Mission08_4-15",
-      "projectPath": "C:\\Users\\kyoan\\source\\repos\\Mission08_4-15\\Mission08_4-15\\Mission08_4-15.csproj",
-      "packagesPath": "C:\\Users\\kyoan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kyoan\\source\\repos\\Mission08_4-15\\Mission08_4-15\\obj\\",
->>>>>>> refs/remotes/origin/main
+      "projectPath": "/Users/jacobharrison/RiderProjects/Mission08_4-15/Mission08_4-15/Mission08_4-15.csproj",
+      "packagesPath": "/Users/jacobharrison/.nuget/packages/",
+      "outputPath": "/Users/jacobharrison/RiderProjects/Mission08_4-15/Mission08_4-15/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "/Users/jensroylance/.nuget/NuGet/NuGet.Config"
-=======
-        "C:\\Users\\kyoan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> refs/remotes/origin/main
+        "/Users/jacobharrison/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2526,7 +2532,7 @@
             "target": "Package",
             "version": "[10.0.2, )"
           },
-          "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+          "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
             "version": "[10.0.2, )"
           },
@@ -2560,11 +2566,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json",
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
->>>>>>> refs/remotes/origin/main
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

@@ -9,8 +9,7 @@ namespace Mission08_4_15.Models
         public int TaskItemId { get; set; }
 
         [Required(ErrorMessage = "Task is required")]
-        public string Task { get; set; }
-
+        public string Task { get; set; } = string.Empty;
         public DateTime? DueDate { get; set; }
 
         [Required(ErrorMessage = "Quadrant is required")]

@@ -6,6 +6,7 @@ namespace Mission08_4_15.Models
     {
         [Key] public int CategoryId { get; set; }
 
-        [Required] public string CategoryName { get; set; }
+        [Required]
+        public string CategoryName { get; set; } = string.Empty;
     }
 }

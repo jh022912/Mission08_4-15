@@ -36,23 +36,23 @@ namespace Mission08_4_15.Controllers
 
         // POST: Home/AddEdit
         [HttpPost]
-        public IActionResult AddEdit(TaskItem task)
+        public IActionResult AddEdit(TaskItem taskItem)
         {
             if (ModelState.IsValid)
             {
-                if (task.TaskItemId == 0)
+                if (taskItem.TaskItemId == 0)
                 {
-                    _repository.AddTask(task);
+                    _repository.AddTask(taskItem);
                 }
                 else
                 {
-                    _repository.UpdateTask(task);
+                    _repository.UpdateTask(taskItem);
                 }
                 return RedirectToAction("Quadrants");
             }
 
             ViewBag.Categories = _repository.GetAllCategories();
-            return View(task);
+            return View(taskItem);
         }
 
         // POST: Home/Delete
