@@ -1,6 +1,122 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿<!-- Matthew Andrus IS 413 A task quadrants view page -->
+@model List<Mission08_4_15.Models.TaskItem>
+
 @{
+    ViewData["Title"] = "Quadrants";
 }
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="col">
+            <h1 class="display-6">Task Quadrants</h1>
+            <p class="text-muted mb-0">Only tasks not marked as completed are shown.</p>
+        </div>
+        <div class="col-auto">
+            <a class="btn btn-primary" asp-action="Create">Add Task</a>
+        </div>
+    </div>
+
+    @{
+        // Only display not completed tasks (per assignment)
+        var activeTasks = Model
+        .Where(t => !t.Completed)
+        .ToList();
+
+        var q1 = activeTasks.Where(t => t.Quadrant == 1).ToList();
+        var q2 = activeTasks.Where(t => t.Quadrant == 2).ToList();
+        var q3 = activeTasks.Where(t => t.Quadrant == 3).ToList();
+        var q4 = activeTasks.Where(t => t.Quadrant == 4).ToList();
+    }
+
+    <div class="row g-3">
+        <!-- Quadrant I -->
+        <div class="col-12 col-lg-6">
+            <div class="card h-100">
+                <div class="card-header fw-semibold">
+                    Quadrant I: Important / Urgent
+                </div>
+                <div class="card-body">
+                    @if (!q1.Any())
+                    {
+                        <div class="text-muted">No tasks here.</div>
+                    }
+                    else
+                    {
+                        @foreach (var t in q1)
+                        {
+                            @await Html.PartialAsync("_TaskRow", t)
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Quadrant II -->
+        <div class="col-12 col-lg-6">
+            <div class="card h-100">
+                <div class="card-header fw-semibold">
+                    Quadrant II: Important / Not Urgent
+                </div>
+                <div class="card-body">
+                    @if (!q2.Any())
+                    {
+                        <div class="text-muted">No tasks here.</div>
+                    }
+                    else
+                    {
+                        @foreach (var t in q2)
+                        {
+                            @await Html.PartialAsync("_TaskRow", t)
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Quadrant III -->
+        <div class="col-12 col-lg-6">
+            <div class="card h-100">
+                <div class="card-header fw-semibold">
+                    Quadrant III: Not Important / Urgent
+                </div>
+                <div class="card-body">
+                    @if (!q3.Any())
+                    {
+                        <div class="text-muted">No tasks here.</div>
+                    }
+                    else
+                    {
+                        @foreach (var t in q3)
+                        {
+                            @await Html.PartialAsync("_TaskRow", t)
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Quadrant IV -->
+        <div class="col-12 col-lg-6">
+            <div class="card h-100">
+                <div class="card-header fw-semibold">
+                    Quadrant IV: Not Important / Not Urgent
+                </div>
+                <div class="card-body">
+                    @if (!q4.Any())
+                    {
+                        <div class="text-muted">No tasks here.</div>
+                    }
+                    else
+                    {
+                        @foreach (var t in q4)
+                        {
+                            @await Html.PartialAsync("_TaskRow", t)
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
