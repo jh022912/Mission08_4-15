@@ -1,22 +1,14 @@
 is_global = true
 build_property.TargetFramework = net10.0
-build_property.TargetFramework = net10.0
-build_property.TargetPlatformMinVersion = 
-build_property.TargetPlatformMinVersion = 
-build_property.UsingMicrosoftNETSdkWeb = true
-build_property.UsingMicrosoftNETSdkWeb = true
-build_property.ProjectTypeGuids = 
-build_property.ProjectTypeGuids = 
-build_property.InvariantGlobalization = 
-build_property.InvariantGlobalization = 
-build_property.PlatformNeutralAssembly = 
-build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
-build_property.EnforceExtendedAnalyzerRules = 
-build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Mission08_4_15
 build_property.RootNamespace = Mission08_4_15
 build_property.ProjectDir = /Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission08_4-15/Mission08_4-15/
@@ -38,8 +30,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission08_4-15/Mission08_4-15/Views/Home/Quadrants.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9RdWFkcmFudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission08_4-15/Mission08_4-15/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission08_4-15/Mission08_4-15/Views/Shared/_TaskRow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19UYXNrUm93LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission08_4-15/Mission08_4-15/Views/Shared/_ValidationScriptsPartial.cshtml]

@@ -1,0 +1,50 @@
+﻿<!-- Matthew Andrus IS413 partial page for task item card -->
+
+@model Mission08_4_15.Models.TaskItem
+
+<div class="border rounded p-2 mb-2">
+    <div class="d-flex justify-content-between align-items-start">
+        <div>
+            <div class="fw-semibold">@Model.Task</div>
+
+            <div class="small text-muted">
+                @* Due date *@
+                @if (Model.DueDate != null)
+                {
+                    <span>Due: @Model.DueDate.Value.ToString("MMM d, yyyy")</span>
+                }
+                else
+                {
+                    <span>No due date</span>
+                }
+
+                @* Category *@
+                <span class="mx-2">•</span>
+                <span>Category: @(Model.Category != null ? Model.Category.Name : "None")</span>
+            </div>
+        </div>
+
+        <div class="d-flex gap-2">
+            @* Mark Completed *@
+            <form asp-action="MarkCompleted" method="post">
+                @* Use the correct key name below: TaskItemId or Id *@
+                <input type="hidden" name="id" value="@Model.TaskItemId" />
+                <button type="submit" class="btn btn-success btn-sm">Completed</button>
+            </form>
+
+            @* Update *@
+            <a class="btn btn-outline-primary btn-sm"
+               asp-action="Edit"
+               asp-route-id="@Model.TaskItemId">
+                Update
+            </a>
+
+            @* Delete *@
+            <a class="btn btn-outline-danger btn-sm"
+               asp-action="Delete"
+               asp-route-id="@Model.TaskItemId">
+                Delete
+            </a>
+        </div>
+    </div>
+</div>

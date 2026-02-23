@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "oiU6cCyAZwY=",
   "success": true,
   "projectFilePath": "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission08_4-15/Mission08_4-15/Mission08_4-15.csproj",
@@ -37,5 +38,11 @@
     "/Users/jensroylance/.nuget/packages/system.composition.runtime/9.0.0/system.composition.runtime.9.0.0.nupkg.sha512",
     "/Users/jensroylance/.nuget/packages/system.composition.typedparts/9.0.0/system.composition.typedparts.9.0.0.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "FqhyPH7tMrI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kyoan\\source\\repos\\Mission08_4-15\\Mission08_4-15\\Mission08_4-15.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> refs/remotes/origin/main
   "logs": []
 }
