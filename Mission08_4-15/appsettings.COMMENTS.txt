@@ -1,0 +1,24 @@
+================================================================================
+APPSETTINGS CONFIGURATION - Mission08 Task Quadrant App
+================================================================================
+JSON does not support comments, so this file documents the appsettings structure.
+================================================================================
+
+appsettings.json
+----------------
+ConnectionStrings:DefaultConnection
+  - SQLite database connection string
+  - Default: "Data Source=Tasks.db" (creates/uses Tasks.db in app directory)
+
+Logging:LogLevel:Default
+  - Minimum log level: "Information", "Debug", "Warning", "Error", "None"
+  - Controls how much the app logs to console/file
+
+
+appsettings.Development.json
+----------------------------
+Logging:LogLevel:Default
+  - Override for Development environment: "Information"
+
+Logging:LogLevel:Microsoft.AspNetCore
+  - Reduces ASP.NET Core framework logs to "Warning" (less noise during dev)

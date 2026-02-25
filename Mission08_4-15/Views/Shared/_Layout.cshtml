@@ -1,15 +1,22 @@
-﻿<!DOCTYPE html>
+@*
+    Shared layout template for all pages.
+    Provides navigation between Quadrants and Add Task views.
+    Uses Bootstrap for responsive design and consistent styling.
+*@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - Covey's Time Management</title>
+    @* Bootstrap CSS for grid system and components *@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css"/>
     <link rel="stylesheet" href="~/css/quadrants.css"/>
 </head>
 <body>
 <header>
+    @* Main navigation: Quadrants view and Add Task link *@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
         <div class="container">
             <a class="navbar-brand" asp-controller="Home" asp-action="Quadrants">Time Manager</a>
@@ -27,10 +34,13 @@
     </nav>
 </header>
 
+@* Main content area - each view renders its content here *@
 <div class="container">
     @RenderBody()
 </div>
 
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-@RenderSection("Scripts", required: false)</body>
+@* Optional Scripts section - AddEdit uses this for validation scripts *@
+@RenderSection("Scripts", required: false)
+</body>
 </html>

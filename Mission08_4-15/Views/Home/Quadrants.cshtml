@@ -1,4 +1,8 @@
-﻿<!-- Matthew Andrus IS 413 A task quadrants view page -->
+@*
+    Quadrants View - displays tasks organized by Covey's 4 quadrants.
+    Only uncompleted tasks are shown. Each quadrant has its own card.
+    Matthew Andrus IS 413
+*@
 @model List<Mission08_4_15.Models.TaskItem>
 
 @{
@@ -6,6 +10,7 @@
 }
 
 <div class="container">
+    @* Header row with title and Add Task button *@
     <div class="row mb-3">
         <div class="col">
             <h1 class="display-6">Task Quadrants</h1>
@@ -16,8 +21,8 @@
         </div>
     </div>
 
+    @* Filter tasks by quadrant. Repository already filters out completed, but we double-check. *@
     @{
-        // Only display not completed tasks (per assignment)
         var activeTasks = Model
         .Where(t => !t.Completed)
         .ToList();
@@ -28,8 +33,9 @@
         var q4 = activeTasks.Where(t => t.Quadrant == 4).ToList();
     }
 
+    @* Bootstrap grid: 2 columns on large screens, 1 on small *@
     <div class="row g-3">
-        <!-- Quadrant I -->
+        @* Quadrant I: Important / Urgent *@
         <div class="col-12 col-lg-6">
             <div class="card h-100">
                 <div class="card-header fw-semibold">
@@ -51,7 +57,7 @@
             </div>
         </div>
 
-        <!-- Quadrant II -->
+        @* Quadrant II: Important / Not Urgent *@
         <div class="col-12 col-lg-6">
             <div class="card h-100">
                 <div class="card-header fw-semibold">
@@ -73,7 +79,7 @@
             </div>
         </div>
 
-        <!-- Quadrant III -->
+        @* Quadrant III: Not Important / Urgent *@
         <div class="col-12 col-lg-6">
             <div class="card h-100">
                 <div class="card-header fw-semibold">
@@ -95,7 +101,7 @@
             </div>
         </div>
 
-        <!-- Quadrant IV -->
+        @* Quadrant IV: Not Important / Not Urgent *@
         <div class="col-12 col-lg-6">
             <div class="card h-100">
                 <div class="card-header fw-semibold">

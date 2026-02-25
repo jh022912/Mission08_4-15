@@ -1,3 +1,4 @@
+@* Add/Edit Task form. TaskItemId == 0 means Add, otherwise Edit. *@
 @model Mission08_4_15.Models.TaskItem
 
 @{
@@ -9,20 +10,24 @@
 <div class="row">
     <div class="col-md-6">
         <form asp-action="AddEdit" method="post">
+            @* Hidden fields: TaskItemId for add vs edit, Completed preserved on edit *@
             <input type="hidden" asp-for="TaskItemId"/>
             <input type="hidden" asp-for="Completed"/>
 
+            @* Task description - required *@
             <div class="mb-3">
                 <label asp-for="Task" class="form-label"></label>
                 <input asp-for="Task" class="form-control"/>
                 <span asp-validation-for="Task" class="text-danger"></span>
             </div>
 
+            @* Due date - optional *@
             <div class="mb-3">
                 <label asp-for="DueDate" class="form-label"></label>
                 <input asp-for="DueDate" type="date" class="form-control"/>
             </div>
 
+            @* Quadrant - required (Covey's 4 quadrants) *@
             <div class="mb-3">
                 <label asp-for="Quadrant" class="form-label"></label>
                 <select asp-for="Quadrant" class="form-select">
@@ -35,6 +40,7 @@
                 <span asp-validation-for="Quadrant" class="text-danger"></span>
             </div>
 
+            @* Category dropdown - populated from database (Home, School, Work, Church) *@
             <div class="mb-3">
                 <label asp-for="CategoryId" class="form-label">Category</label>
                 <select asp-for="CategoryId" class="form-select"
@@ -43,12 +49,14 @@
                 </select>
             </div>
 
+            @* Form actions *@
             <button type="submit" class="btn btn-primary">Save</button>
             <a asp-action="Quadrants" class="btn btn-secondary">Cancel</a>
         </form>
     </div>
 </div>
 
+@* Client-side validation (jQuery Validate + unobtrusive) *@
 @section Scripts {
     <partial name="_ValidationScriptsPartial"/>
 }

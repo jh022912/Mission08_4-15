@@ -1,14 +1,17 @@
-<!-- Matthew Andrus IS413 partial page for task item card -->
-
+@*
+    Partial view for a single task card. Used in Quadrants view.
+    Displays task info + action buttons (Complete, Update, Delete).
+    Matthew Andrus IS413
+*@
 @model Mission08_4_15.Models.TaskItem
 
 <div class="border rounded p-2 mb-2">
     <div class="d-flex justify-content-between align-items-start">
+        @* Left: Task name and details *@
         <div>
             <div class="fw-semibold">@Model.Task</div>
-
             <div class="small text-muted">
-                @* Due date *@
+                @* Due date display *@
                 @if (Model.DueDate != null)
                 {
                     <span>Due: @Model.DueDate.Value.ToString("MMM d, yyyy")</span>
@@ -24,22 +27,22 @@
             </div>
         </div>
 
+        @* Right: Action buttons (Complete, Update, Delete) *@
         <div class="d-flex gap-2">
-            @* Mark Completed *@
+            @* Mark as completed - POST to MarkComplete action *@
             <form asp-action="MarkComplete" method="post">
-                @* Use the correct key name below: TaskItemId or Id *@
                 <input type="hidden" name="id" value="@Model.TaskItemId" />
                 <button type="submit" class="btn btn-success btn-sm">Completed</button>
             </form>
 
-            @* Update *@
+            @* Edit - navigates to AddEdit with task id *@
             <a class="btn btn-outline-primary btn-sm"
                asp-action="AddEdit"
                asp-route-id="@Model.TaskItemId">
                 Update
             </a>
 
-            @* Delete *@
+            @* Delete - POST form (required because Delete action is [HttpPost]) *@
             <form asp-action="Delete" method="post" class="d-inline">
                 <input type="hidden" name="id" value="@Model.TaskItemId" />
                 <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
